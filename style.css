@@ -1,0 +1,234 @@
+:root {
+    --brand-color: #2563eb;
+    --accent-color: #10b981;
+    --surface-color: #ffffff;
+    --background-color: #f1f5f9;
+    --primary-text: #1e293b;
+    --secondary-text: #64748b;
+    --border-color: #e2e8f0;
+}
+
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-text);
+}
+
+/* Overall dashboard - CSS GRID */
+.dashboard {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--brand-color);
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    margin-bottom: 35px;
+    font-size: 26px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main content */
+.main-content {
+    padding: 30px;
+}
+
+/* Header - FLEXBOX */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: var(--secondary-text);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.profile-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Summary cards - CSS GRID */
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.summary > div {
+    background-color: var(--surface-color);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.summary p {
+    color: var(--secondary-text);
+    margin-bottom: 8px;
+}
+
+/* Category cards - CSS GRID */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Category card - FLEXBOX */
+.category-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 22px;
+    min-height: 170px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover interaction */
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Keyboard focus interaction */
+.category-card:focus {
+    outline: 3px solid var(--accent-color);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-icon {
+    font-size: 28px;
+}
+
+.percentage {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.category-card h3 {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.category-card p {
+    color: var(--secondary-text);
+    margin-bottom: 10px;
+}
+
+.category-card strong {
+    font-size: 22px;
+}
+
+/* DARK THEME */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --brand-color: #1d4ed8;
+        --accent-color: #34d399;
+        --surface-color: #1e293b;
+        --background-color: #0f172a;
+        --primary-text: #f8fafc;
+        --secondary-text: #94a3b8;
+        --border-color: #334155;
+    }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding: 20px;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .categories {
+        grid-template-columns: 1fr;
+    }
+}
