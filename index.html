@@ -1,9 +1,14 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SpendWise Dashboard</title>
+
+    <!-- Connect CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,135 +18,141 @@
 
         <!-- Sidebar -->
         <aside class="sidebar">
-            <h2>SpendWise</h2>
 
-            <nav class="nav-menu">
-                <a href="#" class="active">Dashboard</a>
-                <a href="#">Transactions</a>
-                <a href="#">Budgets</a>
-                <a href="#">Savings</a>
-                <a href="#">Reports</a>
-                <a href="#">Settings</a>
+            <div class="logo">
+                <h2>SpendWise</h2>
+            </div>
+
+            <nav class="navigation">
+                <a href="#" class="nav-item active">Dashboard</a>
+                <a href="#" class="nav-item">Transactions</a>
+                <a href="#" class="nav-item">Budgets</a>
+                <a href="#" class="nav-item">Reports</a>
+                <a href="#" class="nav-item">Settings</a>
             </nav>
+
         </aside>
+
 
         <!-- Main Content -->
         <main class="main-content">
 
             <!-- Header -->
             <header class="header">
+
                 <div>
                     <h1>Dashboard</h1>
-                    <p>Welcome back! Here's your financial overview.</p>
+                    <p>Welcome back! Here's your spending overview.</p>
                 </div>
 
                 <div class="profile">
                     <span>Grace</span>
-                    <span class="profile-icon">G</span>
+                    <div class="profile-icon">G</div>
                 </div>
+
             </header>
+
 
             <!-- Summary -->
             <section class="summary">
+
                 <div>
-                    <p>Total Budget</p>
-                    <h2>KSh 100,000</h2>
+                    <h3>Monthly Budget</h3>
+                    <p>KSh 50,000</p>
                 </div>
 
                 <div>
-                    <p>Total Spent</p>
-                    <h2>KSh 63,500</h2>
+                    <h3>Total Spent</h3>
+                    <p>KSh 32,450</p>
                 </div>
 
                 <div>
-                    <p>Total Savings</p>
-                    <h2>KSh 36,500</h2>
+                    <h3>Remaining</h3>
+                    <p>KSh 17,550</p>
                 </div>
+
             </section>
+
 
             <!-- Category Cards -->
             <section class="categories">
 
-                <article class="category-card" tabindex="0">
-                    <div class="card-top">
-                        <span class="category-icon">🍔</span>
-                        <span class="percentage">25%</span>
-                    </div>
-                    <div>
+                <article class="card" tabindex="0">
+                    <div class="card-icon">🍔</div>
+
+                    <div class="card-content">
                         <h3>Food</h3>
                         <p>Monthly spending</p>
-                        <strong>KSh 15,000</strong>
+                        <strong>KSh 8,500</strong>
                     </div>
                 </article>
 
-                <article class="category-card" tabindex="0">
-                    <div class="card-top">
-                        <span class="category-icon">🚌</span>
-                        <span class="percentage">15%</span>
-                    </div>
-                    <div>
+
+                <article class="card" tabindex="0">
+                    <div class="card-icon">🚌</div>
+
+                    <div class="card-content">
                         <h3>Transport</h3>
                         <p>Monthly spending</p>
-                        <strong>KSh 9,500</strong>
+                        <strong>KSh 4,200</strong>
                     </div>
                 </article>
 
-                <article class="category-card" tabindex="0">
-                    <div class="card-top">
-                        <span class="category-icon">🏠</span>
-                        <span class="percentage">30%</span>
-                    </div>
-                    <div>
+
+                <article class="card" tabindex="0">
+                    <div class="card-icon">🏠</div>
+
+                    <div class="card-content">
                         <h3>Rent</h3>
                         <p>Monthly spending</p>
-                        <strong>KSh 19,000</strong>
+                        <strong>KSh 12,000</strong>
                     </div>
                 </article>
 
-                <article class="category-card" tabindex="0"> 
-                    <div class="card-top">
-                        <span class="category-icon">🎬</span>
-                        <span class="percentage">8%</span>
-                    </div>
-                    <div>
+
+                <article class="card" tabindex="0">
+                    <div class="card-icon">🎬</div>
+
+                    <div class="card-content">
                         <h3>Entertainment</h3>
                         <p>Monthly spending</p>
-                        <strong>KSh 5,000</strong>
+                        <strong>KSh 2,750</strong>
                     </div>
                 </article>
 
-                <article class="category-card" tabindex="0">
-                    <div class="card-top">
-                        <span class="category-icon">💰</span>
-                        <span class="percentage">12%</span>
-                    </div>
-                    <div>
+
+                <article class="card" tabindex="0">
+                    <div class="card-icon">💰</div>
+
+                    <div class="card-content">
                         <h3>Savings</h3>
                         <p>Monthly savings</p>
-                        <strong>KSh 7,500</strong>
+                        <strong>KSh 3,500</strong>
                     </div>
                 </article>
 
-                <article class="category-card" tabindex="0">
-                    <div class="card-top">
-                        <span class="category-icon">💡</span>
-                        <span class="percentage">10%</span>
-                    </div>
-                    <div>
+
+                <article class="card" tabindex="0">
+                    <div class="card-icon">💡</div>
+
+                    <div class="card-content">
                         <h3>Utilities</h3>
                         <p>Monthly spending</p>
-                        <strong>KSh 6,500</strong>
+                        <strong>KSh 1,500</strong>
                     </div>
                 </article>
 
             </section>
 
-            </main>
+        </main>
 
-</div>
+    </div>
 
-<script src="script.js"></script>
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
 
 </body>
-</html>
 
+</html>
+```
